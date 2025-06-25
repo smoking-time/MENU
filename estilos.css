@@ -9,6 +9,7 @@ body, html {
 .intro {
   background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
   height: 100vh;
+  padding-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,3 +77,71 @@ body, html {
   background: #e73370;
 }
 /* ...existing code... */
+/* ...existing code... */
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .intro {
+    padding-top: 40px;
+  }
+  .intro-content {
+    padding: 30px 20px;
+  }
+  .navbar {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
+    border-radius: 0 0 12px 12px;
+  }
+  .navbar h1 {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .intro-content {
+    padding: 18px 6px;
+    font-size: 0.95em;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 0;
+  }
+}
+
+.glass-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 4px 24px 0 rgba(31,38,135,0.15);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1.5px solid rgba(255,255,255,0.25);
+  z-index: 100;
+}
+
+.glass-header h1 {
+  text-align: center;
+  margin: 0;
+  padding: 24px 0 16px 0;
+  color: #da1a1a;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* Ajusta el padding-top de .intro para que el contenido no quede oculto */
+.intro {
+  padding-top: 80px;
+}
