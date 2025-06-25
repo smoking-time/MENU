@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenido a Mi Producto</title>
+  <title>Bienvenido</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <nav class="navbar">
-    <h1>MiProducto</h1>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
   <section class="intro">
     <div class="intro-content">
-      <h2>Bienvenido a Mi Producto</h2>
-      <p>Descubre lo mejor aquí.</p>
-      <a href="#productos" class="btn">Ver productos</a>
+      <h1>MiProducto</h1>
+      <p>¿Tienes 18 años o más?</p>
+      <div style="margin-top: 24px;">
+        <button id="btnSi" class="btn" type="button">Sí</button>
+        <button id="btnNo" class="btn" type="button" style="background:#ff8080;">No</button>
+      </div>
+      <p id="ageMessage" style="margin-top:16px; color:#ff8080;"></p>
     </div>
   </section>
+  <script>
+    document.getElementById('btnSi').onclick = function() {
+      window.location.href = "menu.html";
+    };
+    document.getElementById('btnNo').onclick = function() {
+      document.getElementById('ageMessage').textContent = "No cumples con los requisitos de edad para continuar.";
+    };
+  </script>
 </body>
-</html>
